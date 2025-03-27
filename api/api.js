@@ -12,7 +12,13 @@ config();
 const app = express();
 const router = express.Router(); // ✅ FIX: Define router
 
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://skill-frontend-jade.vercel.app/"],
+    methods: ["POST", "GET"],
+    credentials: true
+  }
+));
 app.use(express.json());
 
 // Database connection
