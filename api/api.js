@@ -17,7 +17,6 @@ app.use(express.json());
 
 // Database connection
 connect(process.env.MONGODB_URI || "mongodb+srv://skilltrack:24RavwNNQCzNLLk8@cluster0.40uye.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0", {
-  useNewUrlParser: true,
 })
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("MongoDB connection error:", err));
