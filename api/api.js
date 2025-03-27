@@ -37,7 +37,7 @@ app.get("/api", (req, res) => {
 });
 
 // Registration endpoint
-app.post("/api/register", async (req, res) => {
+app.post("https://skill-backend-b3n9.onrender.com/api/register", async (req, res) => {
   try {
     const { name, email, password } = req.body;
     if (!name || !email || !password) return res.status(400).json({ message: "All fields are required" });
