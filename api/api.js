@@ -31,6 +31,11 @@ const UserSchema = new Schema({
 
 const User = model("User", UserSchema);
 
+
+app.get("/", (req, res) => {
+  res.send("Welcome to the Skill Tracking API");
+});
+
 // Registration endpoint
 app.post("/api/register", async (req, res) => {
   try {
